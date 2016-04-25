@@ -7,32 +7,32 @@ n = 6040
 m = 3883
 
 mat = []
-for i in range(n):
+for i in range(n+1):
 	t = []
-	for j in range(m):
+	for j in range(m+1):
 		t.append(0)
 	mat.append(t)
 
 for line in open(trainFile):
 	t = line.strip().split(" ")
-	i = int(t[0]) - 1
-	j = int(t[1]) - 1
+	i = int(t[0])
+	j = int(t[1])
 	r = int(t[2])
 	mat[i][j] = r
 
 u = {}
-for i in range(n):
+for i in range(1, n+1):
 	t = []
-	for j in range(m):
+	for j in range(1, m+1):
 		r = mat[i][j]
 		if r > 0:
 			t.append("%d:%d"%(j, r))
 	u[i] = t
 
 v = {}
-for i in range(m):
+for i in range(1, m+1):
 	t = []
-	for j in range(n):
+	for j in range(1, n+1):
 		r = mat[j][i]
 		if r > 0:
 			t.append("%d:%d"%(m+j, r))
@@ -44,8 +44,8 @@ print(len(v))
 trainDf = open("train.rc", "w")
 for line in open(trainFile):
 	t = line.strip().split(" ")
-	i = int(t[0]) - 1
-	j = int(t[1]) - 1
+	i = int(t[0])
+	j = int(t[1])
 	r = int(t[2])
 	
 	totalFea = []
@@ -85,8 +85,8 @@ trainDf.close()
 testDf = open("test.rc", "w")
 for line in open(testFile):
 	t = line.strip().split(" ")
-	i = int(t[0]) - 1
-	j = int(t[1]) - 1
+	i = int(t[0])
+	j = int(t[1])
 	r = int(t[2])
 	
 	totalFea = []
