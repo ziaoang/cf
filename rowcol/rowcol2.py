@@ -1,5 +1,3 @@
-
-
 trainFile = "train.txt"
 testFile = "test.txt"
 
@@ -57,7 +55,6 @@ for line in open(trainFile):
 		exit()
 trainDf.close()
 
-
 testDf = open("test.rc2", "w")
 for line in open(testFile):
 	t = line.strip().split(" ")
@@ -73,3 +70,4 @@ for line in open(testFile):
 		print("ERROR: no feature for user %d item %d in test"%(i+1, j +1))
 		exit()
 testDf.close()
+
