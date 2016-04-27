@@ -259,8 +259,8 @@ function AutoEncoderTrainer:Execute(sgdOpt)
 
    for t = 1, noEpoch do
 
-      xlua.progress(t, noEpoch)
-      print("")
+      --xlua.progress(t, noEpoch)
+      --print("")
 
       --train one epoch
       self:Train(sgdOpt, t)
