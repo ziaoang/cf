@@ -257,7 +257,8 @@ function AutoEncoderTrainer:Execute(sgdOpt)
 
    local noEpoch = sgdOpt.noEpoch
 
-   for t = 1, noEpoch do
+--   for t = 1, noEpoch do
+   for t = 1, 2 do
 
       --xlua.progress(t, noEpoch)
       --print("")
@@ -281,6 +282,31 @@ function AutoEncoderTrainer:Execute(sgdOpt)
       end
 
    end
+
+--   print(#self.train)
+--   print(#self.test)
+   local input = self.train[1]
+   local output = self.network:forward(input)
+   print(input)
+   print(output)
+   print(self.network)
+   print("-----------------------------> 1")
+   print(self.network:get(1).output)
+   print("-----------------------------> 2")
+   print(self.network:get(2).output)
+   print("-----------------------------> 3")
+   print(self.network:get(3).output)
+   print("-----------------------------> 4")
+   print(self.network:get(4).output)
+   print("-----------------------------> 5")
+
+   print(output == self.network:get(4).output)
+
+
+--   local myInput = self.train[1]
+--   local myOutput = self.network:forward(myInput)
+--   print(myInput)
+--   print(myOutput)
 
    return self.rmse, self.mae
 
