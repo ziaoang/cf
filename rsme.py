@@ -2,10 +2,12 @@ import sys
 import math
 
 try:
-	resultFile = sys.argv[1]
-	submitFile = sys.argv[2]
+	resultFile  = sys.argv[1]
+	submitFile  = sys.argv[2]
+	resultIndex = int(sys.argv[3])
+	submitIndex = int(sys.argv[4])
 except:
-	print("resultFile submitFile")
+	print("resultFile submitFile resultIndex submitIndex")
 	exit()
 
 err = 0
@@ -21,8 +23,8 @@ while True:
 	if not resLine or not subLine:
 		break
 	
-	real = float(resLine.strip().split(" ")[0])
-	predict = float(subLine.strip())
+	real = float(resLine.strip().split(" ")[resultIndex])
+	predict = float(subLine.strip().split(" ")[submitIndex])
 
 	err += (real - predict) ** 2
 	cnt += 1
