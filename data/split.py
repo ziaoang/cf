@@ -1,8 +1,8 @@
 import random
 
-userFile   = "../data/ml-1m/users.dat"
-itemFile   = "../data/ml-1m/movies.dat"
-ratingFile = "../data/ml-1m/ratings.dat"
+userFile   = "ml-1m/users.dat"
+itemFile   = "ml-1m/movies.dat"
+ratingFile = "ml-1m/ratings.dat"
 
 
 userIdToUserIndex = {}
@@ -34,8 +34,8 @@ for line in open(ratingFile):
 	data.append([userIndex, itemIndex, int(rating)])
 print(len(data))
 
-trainDf = open("train.txt", "w")
-testDf = open("test.txt", "w")
+trainDf = open("my/train.txt", "w")
+testDf = open("my/test.txt", "w")
 random.seed(123456789)
 for t in data:
 	if random.random() < 0.9:
