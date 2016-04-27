@@ -20,52 +20,32 @@ for line in open(trainFile):
 
 u = {}
 for i in range(1, n+1):
-	total = 0
-	cnt = 0
-	for j in range(1, m+1):
-		r = mat[i][j]
-		if r > 0:
-			total += r
-			cnt += 1
-	bias = float(total) / cnt if cnt > 0 else 0
-	
 	t = []
 	for j in range(1, m+1):
 		r = mat[i][j]
 		if r > 0:
-			t.append("%d:%f"%(j, r - bias))
-	
+			t.append("%d:%d"%(j, r))
 	u[i] = t
 
 v = {}
 for i in range(1, m+1):
-	total = 0
-	cnt = 0
-	for j in range(1, n+1):
-		r = mat[j][i]
-		if r > 0:
-			total += r
-			cnt += 1
-	bias = float(total) / cnt if cnt > 0 else 0
-	
 	t = []
 	for j in range(1, n+1):
 		r = mat[j][i]
 		if r > 0:
-			t.append("%d:%f"%(m+j, r - bias))
-	
+			t.append("%d:%d"%(m+j, r))
 	v[i] = t
 
 print(len(u))
 print(len(v))
 
-trainDf = open("train.rc3", "w")
+trainDf = open("train.rc2", "w")
 for line in open(trainFile):
 	t = line.strip().split(" ")
 	i = int(t[0])
 	j = int(t[1])
 	r = int(t[2])
-	
+
 	totalFea = u[i] + v[j]
 
 	if len(totalFea) > 0:
@@ -75,15 +55,15 @@ for line in open(trainFile):
 		exit()
 trainDf.close()
 
-testDf = open("test.rc3", "w")
+testDf = open("test.rc2", "w")
 for line in open(testFile):
 	t = line.strip().split(" ")
 	i = int(t[0])
 	j = int(t[1])
 	r = int(t[2])
-	
+
 	totalFea = u[i] + v[j]
-			
+		
 	if len(totalFea) > 0:
 		testDf.write("%d %s\n"%(r, " ".join(totalFea)))
 	else:
