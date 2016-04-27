@@ -1,10 +1,15 @@
 data/ml-1m
+
 tool/libfm-1.42.src
 tool/liblinear-2.1
 tool/libmf-2.01
 tool/libsvm-3.21
+
 train*
 test*
 user*
 movie*
 rating*
+
+*.model
+*.out

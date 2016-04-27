@@ -1,5 +1,3 @@
-
-
 dataset={};
 function dataset:size() return 100 end -- 100 examples
 for i=1,dataset:size() do
@@ -13,7 +11,6 @@ for i=1,dataset:size() do
 	dataset[i] = {input, output}
 end
 
-
 require "nn"
 mlp = nn.Sequential();  -- make a multi-layer perceptron
 inputs = 2; outputs = 1; HUs = 20; -- parameters
@@ -21,29 +18,14 @@ mlp:add(nn.Linear(inputs, HUs))
 mlp:add(nn.Tanh())
 mlp:add(nn.Linear(HUs, outputs))
 
-
 criterion = nn.MSECriterion()  
 trainer = nn.StochasticGradient(mlp, criterion)
 trainer.learningRate = 0.01
 trainer:train(dataset)
-
 
 x = torch.Tensor(2)
 x[1] =  0.5; x[2] =  0.5; print(mlp:forward(x))
 x[1] =  0.5; x[2] = -0.5; print(mlp:forward(x))
 x[1] = -0.5; x[2] =  0.5; print(mlp:forward(x))
 x[1] = -0.5; x[2] = -0.5; print(mlp:forward(x))
-
-
---local network = nn.Sequential()
---network:add(nn.SparseLinear(6040, 500))
---network:add(nn.Tanh())
---network:add(nn.Linear(500, 6040))
---network:add(nn.Tanh())
-
-
-
-
-
-
 
