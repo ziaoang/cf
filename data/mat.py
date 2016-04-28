@@ -24,11 +24,11 @@ for line in open("my/test.txt"):
 cnt = 0
 for i in range(6040):
 	cnt += row[i]
-print(cnt)
+print("%d/%d"%(cnt, 6040))
 
 
 cnt = 0
 for i in range(3883):
 	cnt += col[i]
-print(cnt)
+print("%d/%d"%(cnt, 3883))
 

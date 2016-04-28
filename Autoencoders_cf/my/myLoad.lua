@@ -133,10 +133,39 @@ data.train.U.info.noRating, data.test.U.info.noRating = data.__n, data.__noRatin
 data.train.V.info.noRating, data.test.V.info.noRating = data.__n, data.__noRating - data.__n
 
 
-print(#data.train.U.data)
-print(#data.train.V.data)
-print(#data.test.U.data)
-print(#data.test.V.data)
+local cnt = 0
+for i = 1, 6040 do
+	if data.train.U.data[i] ~= nil then
+		cnt = cnt + 1
+	end
+end
+print(cnt)
+
+local cnt = 0
+for i = 1, 3883 do
+	if data.train.V.data[i] ~= nil then
+		cnt = cnt + 1
+	end
+end
+print(cnt)
+
+local cnt = 0
+for i = 1, 6040 do
+	if data.test.U.data[i] ~= nil then
+		cnt = cnt + 1
+	end
+end
+print(cnt)
+
+local cnt = 0
+for i = 1, 3883 do
+	if data.test.V.data[i] ~= nil then
+		cnt = cnt + 1
+	end
+end
+print(cnt)
+
+
 
 torch.save("newTrain.t7", {train = data.train, test = data.test })
 
