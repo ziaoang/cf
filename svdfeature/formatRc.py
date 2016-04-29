@@ -2,17 +2,16 @@ import sys
 
 
 try:
-    n       = int(sys.argv[1])
-    m       = int(sys.argv[2])
-    trainFile   = sys.argv[3]
-    testFile    = sys.argv[4]
-    dstTrainFile    = sys.argv[5]
-    dstTestFile     = sys.argv[6]
-    removeBias  = True if sys.argv[7] == "1" else False
+    trainFile       = sys.argv[1]
+    testFile        = sys.argv[2]
+    dstTrainFile    = sys.argv[3]
+    dstTestFile     = sys.argv[4]
 except:
-    print("n m trainFile testFile dstTrainFile dstTestFile removeBias(0|1)")
+    print("trainFile testFile dstTrainFile dstTestFile")
     exit()
 
+n = 6040
+m = 3883
 
 MATRIX = [[0]*(m+1) for i in range(n+1)]
 
@@ -34,7 +33,7 @@ for i in range(1, n+1):
     for j in range(1, m+1):
         r = MATRIX[i][j]
         if r > 0:
-            t.append("%d:%d"%(j, r))
+            t.append("%d:%d"%(j-1, r))
     U_fea[i] = " ".join(t)
     U_cnt[i] = len(t)
 
@@ -47,7 +46,7 @@ for j in range(1, m+1):
     for i in range(1, n+1):
         r = MATRIX[i][j]
         if r > 0:
-            t.append("%d:%d"%(i, r))
+            t.append("%d:%d"%(i-1, r))
     V_fea[j] = " ".join(t)
     V_cnt[j] = len(t)
 
@@ -90,19 +89,6 @@ for line in open(testFile):
     else:
         df.write("%d 0 %d %d %s %s\n"%(r, U_cnt[i], V_cnt[j], U_fea[i], V_fea[j]))
 df.close()
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
