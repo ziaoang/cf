@@ -10,7 +10,7 @@ for i in range(3883):
 
 mat = [[0]*3883 for i in range(6040)]
 
-for line in open("my/test.txt"):
+for line in open("my/train.txt"):
 	t = line.strip().split(" ")
 	userId = int(t[0]) - 1
 	itemId = int(t[1]) - 1

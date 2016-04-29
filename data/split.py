@@ -29,9 +29,10 @@ for line in open(ratingFile):
 	userId = t[0]
 	itemId = t[1]
 	rating = t[2]
+	time   = t[3]
 	userIndex = userIdToUserIndex[userId]
 	itemIndex = itemIdToItemIndex[itemId]
-	data.append([userIndex, itemIndex, int(rating)])
+	data.append([userIndex, itemIndex, rating, time])
 print(len(data))
 
 trainDf = open("my/train.txt", "w")
@@ -39,9 +40,9 @@ testDf = open("my/test.txt", "w")
 random.seed(123456789)
 for t in data:
 	if random.random() < 0.9:
-		trainDf.write("%d %d %d\n"%(t[0], t[1], t[2]))
+		trainDf.write("%d %d %s %s\n"%(t[0], t[1], t[2], t[3]))
 	else:
-		testDf.write("%d %d %d\n"%(t[0], t[1], t[2]))
+		testDf.write("%d %d %s %s\n"%(t[0], t[1], t[2], t[3]))
 trainDf.close()
 testDf.close()
 
