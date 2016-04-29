@@ -52,7 +52,7 @@ for j in range(1, m+1):
 
 
 print("generate target trian file")
-df = open(dstTrainFile, "w")
+df =
 for line in open(trainFile):
     t = line.strip().split(" ")
     i = int(t[0])
@@ -68,27 +68,10 @@ for line in open(trainFile):
         df.write("%d 0 %d %d %s\n"%(r, U_cnt[i], V_cnt[j], U_fea[i]))
     else:
         df.write("%d 0 %d %d %s %s\n"%(r, U_cnt[i], V_cnt[j], U_fea[i], V_fea[j]))
-df.close()
 
 
-print("generate target test file")
-df = open(dstTestFile, "w")
-for line in open(testFile):
-    t = line.strip().split(" ")
-    i = int(t[0])
-    j = int(t[1])
-    r = int(t[2])
-    
-    if U_cnt[i] == 0 and V_cnt[j] == 0:
-        print("ERROR")
-        exit()
-    if U_cnt[i] == 0:
-        df.write("%d 0 %d %d %s\n"%(r, U_cnt[i], V_cnt[j], V_fea[j]))
-    elif V_cnt[j] == 0:
-        df.write("%d 0 %d %d %s\n"%(r, U_cnt[i], V_cnt[j], U_fea[i]))
-    else:
-        df.write("%d 0 %d %d %s %s\n"%(r, U_cnt[i], V_cnt[j], U_fea[i], V_fea[j]))
-df.close()
+
+
 
 
 
