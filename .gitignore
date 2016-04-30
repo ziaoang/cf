@@ -16,3 +16,5 @@ rating*
 *.out
 *.t7
 *.mid
+
+.DS_Store
