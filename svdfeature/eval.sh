@@ -5,5 +5,5 @@ done
 
 for i in $(seq 0 50)
 do
-    python ../rsme.py ../doc2vec/train.doc2vec data/$i.out 0 0
+    python ../rsme.py ../doc2vec/test.doc2vec data/$i.out 0 0
 done
