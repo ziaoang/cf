@@ -1,4 +1,3 @@
-
 import gensim
 from collections import defaultdict
 
@@ -23,7 +22,7 @@ for userId in userPool:
     sentence = gensim.models.doc2vec.TaggedDocument(words=words, tags=["u" + userId])
     sentences.append(sentence)
 
-model = gensim.models.Doc2Vec(sentences, size=100, window=8, min_count=0, workers=4, dm=1)
+model = gensim.models.Doc2Vec(sentences, size=50, window=10, min_count=1, workers=6, sample=1e-5, dm=1)
 
 df = open("doc2vec.model", "w")
 for i in range(6040):

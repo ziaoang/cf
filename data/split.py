@@ -39,7 +39,7 @@ trainDf = open("my/train.txt", "w")
 testDf = open("my/test.txt", "w")
 random.seed(123456789)
 for t in data:
-	if random.random() < 0.9:
+	if random.random() < 0.8:
 		trainDf.write("%d %d %s %s\n"%(t[0], t[1], t[2], t[3]))
 	else:
 		testDf.write("%d %d %s %s\n"%(t[0], t[1], t[2], t[3]))

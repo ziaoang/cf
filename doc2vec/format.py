@@ -1,6 +1,7 @@
 import sys
 
-modelFile = "doc2vec.model"
+#modelFile = "doc2vec.model"
+modelFile = "doc2vec.model.normalize"
 
 feature = {}
 for line in open(modelFile):
@@ -10,10 +11,10 @@ for line in open(modelFile):
         fea.append("%d:%s"%(i-1, t[i]))
     feature[t[0]] = " ".join(fea)
 
-trainFile = "../data/my/train.txt"
-testFile = "../data/my/test.txt"
+trainFile       = "../data/my/train.txt"
+testFile        = "../data/my/test.txt"
 targetTrainFile = "train.doc2vec"
-targetTestFile = "test.doc2vec"
+targetTestFile  = "test.doc2vec"
 
 def format(srcFile, dstFile):
     df = open(dstFile, "w")
