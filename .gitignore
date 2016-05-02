@@ -1,4 +1,6 @@
 data/ml-1m
+data/ml-20m
+doc2vec/doc2vec.model.normalize
 
 tool/libfm-1.42.src
 tool/liblinear-2.1

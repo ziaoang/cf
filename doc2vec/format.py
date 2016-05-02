@@ -1,7 +1,7 @@
 import sys
 
-#modelFile = "doc2vec.model"
-modelFile = "doc2vec.model.normalize"
+modelFile = "doc2vec.model"
+#modelFile = "doc2vec.model.normalize"
 
 feature = {}
 for line in open(modelFile):
