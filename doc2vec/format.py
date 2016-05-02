@@ -6,10 +6,7 @@ modelFile = "doc2vec.model"
 feature = {}
 for line in open(modelFile):
     t = line.strip().split(" ")
-    fea = []
-    for i in range(1, len(t)):
-        fea.append("%d:%s"%(i-1, t[i]))
-    feature[t[0]] = " ".join(fea)
+    feature[t[0]] = t[1:]
 
 trainFile       = "../data/my/train.txt"
 testFile        = "../data/my/test.txt"
@@ -25,25 +22,18 @@ def format(srcFile, dstFile):
         rating = t[2]
         time   = t[3]
 
-        userFea = None
+        userFea = "%d:1"%(int(t[0])-1)
         if userId in feature:
-            userFea = feature[userId]
+            for i in range(50):
+                userFea += " %d:%s"%(6040+i, feature[userId][i])
 
-        itemFea = None
+        itemFea = "%d:1"%(int(t[1])-1)
         if itemId in feature:
-            itemFea = feature[itemId]
+            for i in range(50):
+                itemFea += " %d:%s"%(3883+i, feature[itemId][i])
 
-        if userFea == None and itemFea == None:
-            print("ERROR: %s %s"%(userId, itemId))
-            exit()
-        elif userFea != None and itemFea == None:
-            df.write("%s 0 %d %d %s\n"%(rating, userFea.count(" ")+1 , 0, userFea))
-        elif userFea == None and itemFea != None:
-            df.write("%s 0 %d %d %s\n"%(rating, 0, itemFea.count(" ")+1 , itemFea))
-        else:
-            df.write("%s 0 %d %d %s %s\n"%(rating, userFea.count(" ")+1, itemFea.count(" ")+1, userFea, itemFea))
+        df.write("%s 0 %d %d %s %s\n"%(rating, userFea.count(" ")+1, itemFea.count(" ")+1, userFea, itemFea))
     df.close()
-
 
 format(trainFile, targetTrainFile)
 format(testFile, targetTestFile)
