@@ -1,4 +1,3 @@
-
 def normalize(srcFile, dstFile):
     df = open(dstFile, "w")
     for line in open(srcFile):
@@ -18,6 +17,3 @@ def normalize(srcFile, dstFile):
             norFea.append(str(norV))
         df.write("%s %s\n"%(id, " ".join(norFea)))
     df.close()
-
-normalize("model/doc2vec.model", "model/doc2vec.model.nor")
-
