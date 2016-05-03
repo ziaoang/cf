@@ -1,50 +1,81 @@
+import sys
 import random
+from collections import defaultdict
 
-userFile   = "ml-1m/users.dat"
-itemFile   = "ml-1m/movies.dat"
-ratingFile = "ml-1m/ratings.dat"
+random.seed(123456789)
 
+try:
+    ratingFile = sys.argv[1]
+    trainFile  = sys.argv[2]
+    testFile   = sys.argv[3]
+    ratio      = float(sys.argv[4])
+except:
+    print("ratingFile trainFile testFile ratio")
+    exit()
+
+# load rating record
+userIdSet = set()
+itemIdSet = set()
+recordList = []
+
+no = 0
+for line in open(ratingFile):
+    no += 1
+    if no == 1 and ".csv" in ratingFile:
+        continue
+    
+    splitChar = None
+    if "::" in line:
+        splitChar = "::"
+    elif "," in line:
+        splitChar = ","
+    else:
+        print("Rating File Format Error")
+        exit()
+
+    userIdStr, itemIdStr, ratingStr, timeStr = line.strip().split(splitChar)
+
+    userIdSet.add(userIdStr)
+    itemIdSet.add(itemIdStr)
+    recordList.append([userIdStr, itemIdStr, ratingStr, timeStr])
+
+print("%d users"%len(userIdSet))
+print("%d items"%len(itemIdSet))
+
+# turn id to index
+userIdList = list(userIdSet)
+itemIdList = list(itemIdSet)
+
+userIdList.sort(key=lambda t:int(t))
+itemIdList.sort(key=lambda t:int(t))
 
 userIdToUserIndex = {}
-userIndex = 0
-for line in open(userFile):
-	userIndex += 1
-	t = line.strip().split("::")
-	userId = t[0]
-	userIdToUserIndex[userId] = userIndex
-print(userIndex)
-
 itemIdToItemIndex = {}
-itemIndex = 0
-for line in open(itemFile):
-	itemIndex += 1
-	t = line.strip().split("::")
-	itemId = t[0]
-	itemIdToItemIndex[itemId] = itemIndex
-print(itemIndex)
 
-data = []
-for line in open(ratingFile):
-	t = line.strip().split("::")
-	userId = t[0]
-	itemId = t[1]
-	rating = t[2]
-	time   = t[3]
-	userIndex = userIdToUserIndex[userId]
-	itemIndex = itemIdToItemIndex[itemId]
-	data.append([userIndex, itemIndex, rating, time])
-print(len(data))
+for i in range(len(userIdList)):
+    userIdToUserIndex[userIdList[i]] = i
 
-trainDf = open("my/train.txt", "w")
-testDf = open("my/test.txt", "w")
-random.seed(123456789)
-for t in data:
-	if random.random() < 0.9:
-		trainDf.write("%d %d %s %s\n"%(t[0], t[1], t[2], t[3]))
-	else:
-		testDf.write("%d %d %s %s\n"%(t[0], t[1], t[2], t[3]))
+for i in range(len(itemIdList)):
+    itemIdToItemIndex[itemIdList[i]] = i
+
+# generate training set and test set
+random.shuffle(recordList)
+
+trainDf = open(trainFile, "w")
+testDf  = open(testFile, "w")
+for record in recordList:
+    userId = record[0]
+    itemId = record[1]
+    rating = record[2]
+    time   = record[3]
+
+    userIndex = userIdToUserIndex[userId]
+    itemIndex = itemIdToItemIndex[itemId]
+
+    if random.random() < ratio:
+        trainDf.write("%d %d %s %s\n"%(userIndex, itemIndex, rating, time))
+    else:
+        testDf.write("%d %d %s %s\n"%(userIndex, itemIndex, rating, time))
 trainDf.close()
 testDf.close()
-
-
 

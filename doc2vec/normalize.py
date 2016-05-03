@@ -19,5 +19,5 @@ def normalize(srcFile, dstFile):
         df.write("%s %s\n"%(id, " ".join(norFea)))
     df.close()
 
-normalize("doc2vec.model", "doc2vec.model.normalize")
+normalize("model/doc2vec.model", "model/doc2vec.model.nor")
 

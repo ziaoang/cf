@@ -1,17 +1,27 @@
 import sys
 
-modelFile = "doc2vec.model"
-#modelFile = "doc2vec.model.normalize"
 
-feature = {}
-for line in open(modelFile):
-    t = line.strip().split(" ")
-    feature[t[0]] = t[1:]
+try:
+    targetTrainFile = sys.argv[1]
+    targetTestFile  = sys.argv[2]
+    modelFile       = sys.argv[3]
+except:
+    print("targetTrainFile targetTestFile modelFile(None)")
+    exit()
+
 
 trainFile       = "../data/my/train.txt"
 testFile        = "../data/my/test.txt"
-targetTrainFile = "train.doc2vec"
-targetTestFile  = "test.doc2vec"
+
+
+feature = {}
+try:
+    for line in open(modelFile):
+        t = line.strip().split(" ")
+        feature[t[0]] = t[1:]
+except:
+    print("no model file")
+
 
 def format(srcFile, dstFile):
     df = open(dstFile, "w")
@@ -36,5 +46,5 @@ def format(srcFile, dstFile):
     df.close()
 
 format(trainFile, targetTrainFile)
-format(testFile, targetTestFile)
+format(testFile,  targetTestFile)
 

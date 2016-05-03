@@ -28,7 +28,7 @@ for userId in userPool:
 model = gensim.models.Doc2Vec(sentences, size=50, window=10, min_count=1, workers=6, sample=1e-5, dm=1)
 
 # save model
-df = open("doc2vec.model", "w")
+df = open("model/doc2vec.model", "w")
 
 for userId in userIdSet:
     userVecId = "u" + userId
