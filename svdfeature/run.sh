@@ -1,7 +1,8 @@
-for i in 1 10 20; do
+#for i in 1 10 20; do
+for i in 20; do
 
-    trainFile=../pipeline/data/train-${i}m.txt
-    testFile=../pipeline/data/test-${i}m.txt
+    trainFile=../pipeline/data/train-${i}m.d2v.svd
+    testFile=../pipeline/data/test-${i}m.d2v.svd
 
     outputFolder=data-${i}m
 
