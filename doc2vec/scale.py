@@ -1,3 +1,13 @@
+import sys
+
+try:
+    srcFile = sys.argv[1]
+    dstFile = sys.argv[2]
+    ratio   = float(sys.argv[3])
+except:
+    print("srcFile dstFile ratio")
+    exit()
+
 def scale(srcFile, dstFile, ratio):
     df = open(dstFile, "w")
     for line in open(srcFile):
@@ -10,3 +20,5 @@ def scale(srcFile, dstFile, ratio):
             fea.append(str(newValue))
         df.write("%s %s\n"%(id, " ".join(fea)))
     df.close()
+
+scale(srcFile, dstFile, ratio)

@@ -48,12 +48,13 @@ df = open(modelFile, "w")
 for userId in userList:
     userVecId = "u" + userId
     userVector = [0] * dimension
-    itemList = userItemList[userVecId]
-    for itemVecId in itemList:
+    cnt = 0
+    for itemVecId in userItemList[userVecId]:
         vector = model[itemVecId]
         for i in range(dimension):
             userVector[i] += vector[i]
-    t = [str(v/len(itemList)) for v in userVector]
+        cnt += 1
+    t = [str(v/cnt) for v in userVector]
     df.write("%s %s\n"%(userVecId, " ".join(t)))
 
 for itemId in itemList:
