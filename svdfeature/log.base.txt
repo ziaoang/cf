@@ -1,0 +1,480 @@
+start creating buffer...
+all generation end, 1 sec used
+start creating buffer...
+all generation end, 1 sec used
+SVDFeatureCSRFactory: num_batch=901
+initializing end, start updating
+updating end, 10 sec in all
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/0.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/1.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/2.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/3.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/4.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/5.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/6.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/7.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/8.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/9.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/10.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/11.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/12.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/13.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/14.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/15.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/16.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/17.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/18.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/19.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/20.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/21.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/22.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/23.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/24.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/25.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/26.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/27.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/28.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/29.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/30.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/31.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/32.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/33.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/34.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/35.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/36.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/37.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/38.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/39.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/40.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/41.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/42.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/43.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/44.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/45.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/46.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/47.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/48.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/49.out
+SVDFeatureCSRFactory: num_batch=101
+start prediction...prediction end, results stored to data-1m/50.out
+1.115513
+0.934029
+0.919283
+0.914302
+0.912036
+0.910815
+0.910020
+0.909301
+0.908281
+0.906392
+0.902965
+0.897989
+0.892466
+0.887055
+0.881751
+0.876595
+0.871660
+0.866972
+0.862589
+0.858625
+0.855195
+0.852377
+0.850201
+0.848682
+0.847800
+0.847538
+0.847870
+0.848751
+0.850127
+0.851943
+0.854130
+0.856639
+0.859379
+0.862292
+0.865312
+0.868399
+0.871502
+0.874583
+0.877619
+0.880594
+0.883509
+0.886352
+0.889119
+0.891811
+0.894422
+0.896961
+0.899422
+0.901812
+0.904134
+0.906394
+0.908584
+start creating buffer...
+all generation end, 7 sec used
+start creating buffer...
+all generation end, 1 sec used
+SVDFeatureCSRFactory: num_batch=8999
+initializing end, start updating
+updating end, 120 sec in all
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/0.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/1.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/2.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/3.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/4.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/5.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/6.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/7.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/8.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/9.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/10.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/11.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/12.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/13.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/14.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/15.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/16.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/17.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/18.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/19.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/20.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/21.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/22.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/23.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/24.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/25.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/26.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/27.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/28.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/29.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/30.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/31.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/32.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/33.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/34.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/35.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/36.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/37.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/38.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/39.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/40.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/41.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/42.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/43.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/44.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/45.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/46.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/47.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/48.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/49.out
+SVDFeatureCSRFactory: num_batch=1002
+start prediction...prediction end, results stored to data-10m/50.out
+1.060416
+0.883186
+0.873164
+0.868886
+0.862408
+0.849999
+0.837929
+0.826566
+0.816375
+0.807373
+0.799801
+0.793624
+0.788819
+0.785371
+0.783204
+0.782194
+0.782169
+0.782901
+0.784150
+0.785712
+0.787440
+0.789246
+0.791074
+0.792896
+0.794694
+0.796459
+0.798188
+0.799874
+0.801518
+0.803119
+0.804677
+0.806191
+0.807664
+0.809095
+0.810485
+0.811837
+0.813151
+0.814427
+0.815667
+0.816873
+0.818046
+0.819188
+0.820299
+0.821379
+0.822430
+0.823454
+0.824451
+0.825423
+0.826370
+0.827294
+0.828195
+start creating buffer...
+all generation end, 14 sec used
+start creating buffer...
+all generation end, 2 sec used
+SVDFeatureCSRFactory: num_batch=17998
+initializing end, start updating
+updating end, 268 sec in all
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/0.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/1.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/2.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/3.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/4.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/5.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/6.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/7.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/8.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/9.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/10.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/11.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/12.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/13.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/14.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/15.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/16.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/17.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/18.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/19.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/20.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/21.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/22.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/23.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/24.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/25.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/26.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/27.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/28.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/29.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/30.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/31.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/32.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/33.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/34.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/35.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/36.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/37.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/38.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/39.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/40.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/41.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/42.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/43.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/44.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/45.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/46.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/47.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/48.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/49.out
+SVDFeatureCSRFactory: num_batch=2003
+start prediction...prediction end, results stored to data-20m/50.out
+1.052395
+0.875650
+0.866280
+0.859233
+0.843238
+0.828175
+0.815058
+0.803688
+0.794140
+0.786318
+0.780060
+0.775330
+0.772091
+0.770247
+0.769587
+0.769813
+0.770621
+0.771771
+0.773110
+0.774545
+0.776024
+0.777516
+0.779005
+0.780481
+0.781933
+0.783360
+0.784756
+0.786121
+0.787454
+0.788754
+0.790021
+0.791256
+0.792459
+0.793629
+0.794767
+0.795875
+0.796953
+0.798001
+0.799022
+0.800015
+0.800982
+0.801923
+0.802840
+0.803734
+0.804605
+0.805454
+0.806281
+0.807088
+0.807876
+0.808644
+0.809395

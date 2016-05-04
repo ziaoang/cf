@@ -1,8 +1,9 @@
-#for i in 1 10 20; do
-for i in 20; do
+for i in 1 10 20; do
 
-    trainFile=../pipeline/data/train-${i}m.d2v.svd
-    testFile=../pipeline/data/test-${i}m.d2v.svd
+    trainFile=../feature/data/train-${i}m.d2v.svd
+    testFile=../feature/data/test-${i}m.d2v.svd
+    #trainFile=data/train-${i}m.base.svd
+    #testFile=data/test-${i}m.base.svd
 
     outputFolder=data-${i}m
 
@@ -23,7 +24,7 @@ for i in 20; do
     done
     
     for j in $(seq 0 50); do
-        python ../rsme.py $testFile ${outputFolder}/${j}.out 0 0 
+        python ../rsme_range.py $testFile ${outputFolder}/${j}.out 0 0 
     done
 
 done
