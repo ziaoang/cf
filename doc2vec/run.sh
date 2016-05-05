@@ -3,8 +3,9 @@
 #python feature.py ../data/my/train-20m.txt data/model-20m.txt
 
 
-for i in $(seq 1 9); do
-    python scale.py data/model-1m.txt data/model-1m.0.${i}.txt 0.${i}
-    python scale.py data/model-10m.txt data/model-10m.0.${i}.txt 0.${i}
-    python scale.py data/model-20m.txt data/model-20m.0.${i}.txt 0.${i}
-done
+python scale.py data/model-1m.txt data/model-1m.2.5.txt 2.5
+#for i in $(seq 2 9); do
+    #python scale.py data/model-1m.txt data/model-1m.${i}.txt ${i}
+    #python scale.py data/model-10m.txt data/model-10m.${i}.txt ${i}
+    #python scale.py data/model-20m.txt data/model-20m.${i}.txt ${i}
+#done

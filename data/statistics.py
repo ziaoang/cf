@@ -7,12 +7,14 @@ except:
     print("trainFile testFile")
     exit()
 
+ratingCnt = 0
 userSet = set()
 itemSet = set()
 
 total = 0
 cnt = 0
 for line in open(trainFile):
+    ratingCnt += 1
     userIdStr, itemIdStr, ratingStr, timeStr = line.strip().split(" ")
     userSet.add(userIdStr)
     itemSet.add(itemIdStr)
@@ -20,6 +22,7 @@ for line in open(trainFile):
     cnt += 1
 
 for line in open(testFile):
+    ratingCnt += 1
     userIdStr, itemIdStr, ratingStr, timeStr = line.strip().split(" ")
     userSet.add(userIdStr)
     itemSet.add(itemIdStr)
@@ -30,8 +33,14 @@ itemList = list(itemSet)
 userList.sort(key=lambda t:int(t))
 itemList.sort(key=lambda t:int(t))
 
-print("user id count: %d"%len(userList))
-print("item id count: %d"%len(itemList))
+userCnt = len(userList)
+itemCnt = len(itemList)
+sparsity = 100*(1 - float(ratingCnt) / (userCnt * itemCnt))
+
+print("user id count: %d"%userCnt)
+print("item id count: %d"%itemCnt)
+print("rating count: %d"%ratingCnt)
+print("Sparsity: %.2f"%sparsity)
 
 print("min user id: %s"%userList[0])
 print("max user id: %s"%userList[-1])

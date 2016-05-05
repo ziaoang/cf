@@ -1,11 +1,6 @@
-6040 users
-3706 items
-69878 users
-10677 items
-138493 users
-26744 items
 user id count: 6040
 item id count: 3706
+rating count: 1000209
 min user id: 0
 max user id: 6039
 min item id: 0
@@ -13,6 +8,7 @@ max item id: 3705
 mean rating in train file: 3.581122
 user id count: 69878
 item id count: 10677
+rating count: 10000054
 min user id: 0
 max user id: 69877
 min item id: 0
@@ -20,6 +16,7 @@ max item id: 10676
 mean rating in train file: 3.512444
 user id count: 138493
 item id count: 26744
+rating count: 20000263
 min user id: 0
 max user id: 138492
 min item id: 0

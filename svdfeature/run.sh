@@ -1,9 +1,10 @@
-for i in 1 10 20; do
+#for i in 1 10 20; do
+for i in 1; do
 
-    trainFile=../feature/data/train-${i}m.d2v.svd
-    testFile=../feature/data/test-${i}m.d2v.svd
-    #trainFile=data/train-${i}m.base.svd
-    #testFile=data/test-${i}m.base.svd
+    #trainFile=../feature/data/train-${i}m.2.5.d2v.svd
+    #testFile=../feature/data/test-${i}m.2.5.d2v.svd
+    trainFile=data/train-${i}m.base.svd
+    testFile=data/test-${i}m.base.svd
 
     outputFolder=data-${i}m
 

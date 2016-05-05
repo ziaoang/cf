@@ -68,7 +68,7 @@ df.write("num_user   = %d\n"%len(userSet))
 df.write("num_item   = %d\n"%len(itemSet))
 
 df.write("active_type = 0\n")
-df.write("num_factor  = 64\n")
+df.write("num_factor  = 128\n")
 
 df.write("learning_rate = 0.005\n")
 df.write("wd_item       = 0.004\n")
