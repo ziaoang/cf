@@ -1,6 +1,7 @@
 user id count: 6040
 item id count: 3706
 rating count: 1000209
+Sparsity: 95.53
 min user id: 0
 max user id: 6039
 min item id: 0
@@ -9,6 +10,7 @@ mean rating in train file: 3.581122
 user id count: 69878
 item id count: 10677
 rating count: 10000054
+Sparsity: 98.66
 min user id: 0
 max user id: 69877
 min item id: 0
@@ -17,6 +19,7 @@ mean rating in train file: 3.512444
 user id count: 138493
 item id count: 26744
 rating count: 20000263
+Sparsity: 99.46
 min user id: 0
 max user id: 138492
 min item id: 0

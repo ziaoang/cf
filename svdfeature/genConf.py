@@ -60,15 +60,27 @@ for line in open(testFile):
         itemSet.add(tt[0])
 
 
+globalList = [int(v) for v in globalSet]
+userList = [int(v) for v in userSet]
+itemList = [int(v) for v in itemSet]
+
+globalList.sort()
+userList.sort()
+itemList.sort()
+
+num_global = globalList[-1]+1 if len(globalList) > 0 else 0
+num_user = userList[-1]+1 if len(userList) > 0 else 0
+num_item = itemList[-1]+1 if len(itemList) > 0 else 0
+
 df = open(confFile, "w")
 
 df.write("base_score = %f\n"%(total/cnt))
-df.write("num_global = %d\n"%len(globalSet))
-df.write("num_user   = %d\n"%len(userSet))
-df.write("num_item   = %d\n"%len(itemSet))
+df.write("num_global = %d\n"%num_global)
+df.write("num_user   = %d\n"%num_user)
+df.write("num_item   = %d\n"%num_item)
 
 df.write("active_type = 0\n")
-df.write("num_factor  = 128\n")
+df.write("num_factor  = 64\n")
 
 df.write("learning_rate = 0.005\n")
 df.write("wd_item       = 0.004\n")

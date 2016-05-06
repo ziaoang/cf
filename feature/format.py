@@ -47,7 +47,7 @@ def add(srcFile, dstFile):
             fea = featureDict[userVecId]
             for i in range(len(fea)):
                 userFea += " %d:%s"%(userNum+i, fea[i])
-
+        
         itemFea = "%s:1"%itemId
         itemVecId = "v" + itemId
         if itemVecId in featureDict:
