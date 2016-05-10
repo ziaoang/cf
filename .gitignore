@@ -1,6 +1,5 @@
-data/ml-1m
-data/ml-20m
-doc2vec/doc2vec.model.normalize
+movielens
+data/netflix/
 
 tool/libfm-1.42.src
 tool/liblinear-2.1
@@ -8,15 +7,17 @@ tool/libmf-2.01
 tool/libsvm-3.21
 tool/svdfeature-1.2.2
 
+doc2vec/data/
+
 train*
 test*
 user*
 movie*
 rating*
 
+*.als
+*.libfm
 *.model
 *.out
-*.t7
-*.mid
 
 .DS_Store
