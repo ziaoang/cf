@@ -1,6 +1,6 @@
-for i in 1 10 20; do
+for i in 1m 10m 20m net; do
     for j in $(seq 1 5); do
-        python feature.py ../data/my/train-${i}m.${j}.txt data/model-${i}m.${j}.txt
+        python feature.py ../data/my/train-${i}.${j}.txt data/model-${i}.${j}.txt
     done
 done
 
