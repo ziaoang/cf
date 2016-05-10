@@ -1,3 +1,24 @@
+6040 users
+3706 items
+1 cross
+2 cross
+3 cross
+4 cross
+5 cross
+69878 users
+10677 items
+1 cross
+2 cross
+3 cross
+4 cross
+5 cross
+138493 users
+26744 items
+1 cross
+2 cross
+3 cross
+4 cross
+5 cross
 user id count: 6040
 item id count: 3706
 rating count: 1000209
@@ -7,6 +28,42 @@ max user id: 6039
 min item id: 0
 max item id: 3705
 mean rating in train file: 3.581122
+user id count: 6040
+item id count: 3706
+rating count: 1000209
+Sparsity: 95.53
+min user id: 0
+max user id: 6039
+min item id: 0
+max item id: 3705
+mean rating in train file: 3.581225
+user id count: 6040
+item id count: 3706
+rating count: 1000209
+Sparsity: 95.53
+min user id: 0
+max user id: 6039
+min item id: 0
+max item id: 3705
+mean rating in train file: 3.581342
+user id count: 6040
+item id count: 3706
+rating count: 1000209
+Sparsity: 95.53
+min user id: 0
+max user id: 6039
+min item id: 0
+max item id: 3705
+mean rating in train file: 3.581491
+user id count: 6040
+item id count: 3706
+rating count: 1000209
+Sparsity: 95.53
+min user id: 0
+max user id: 6039
+min item id: 0
+max item id: 3705
+mean rating in train file: 3.581509
 user id count: 69878
 item id count: 10677
 rating count: 10000054
@@ -16,6 +73,42 @@ max user id: 69877
 min item id: 0
 max item id: 10676
 mean rating in train file: 3.512444
+user id count: 69878
+item id count: 10677
+rating count: 10000054
+Sparsity: 98.66
+min user id: 0
+max user id: 69877
+min item id: 0
+max item id: 10676
+mean rating in train file: 3.512674
+user id count: 69878
+item id count: 10677
+rating count: 10000054
+Sparsity: 98.66
+min user id: 0
+max user id: 69877
+min item id: 0
+max item id: 10676
+mean rating in train file: 3.512509
+user id count: 69878
+item id count: 10677
+rating count: 10000054
+Sparsity: 98.66
+min user id: 0
+max user id: 69877
+min item id: 0
+max item id: 10676
+mean rating in train file: 3.512397
+user id count: 69878
+item id count: 10677
+rating count: 10000054
+Sparsity: 98.66
+min user id: 0
+max user id: 69877
+min item id: 0
+max item id: 10676
+mean rating in train file: 3.512198
 user id count: 138493
 item id count: 26744
 rating count: 20000263
@@ -25,4 +118,39 @@ max user id: 138492
 min item id: 0
 max item id: 26743
 mean rating in train file: 3.525452
-
+user id count: 138493
+item id count: 26744
+rating count: 20000263
+Sparsity: 99.46
+min user id: 0
+max user id: 138492
+min item id: 0
+max item id: 26743
+mean rating in train file: 3.525426
+user id count: 138493
+item id count: 26744
+rating count: 20000263
+Sparsity: 99.46
+min user id: 0
+max user id: 138492
+min item id: 0
+max item id: 26743
+mean rating in train file: 3.525399
+user id count: 138493
+item id count: 26744
+rating count: 20000263
+Sparsity: 99.46
+min user id: 0
+max user id: 138492
+min item id: 0
+max item id: 26743
+mean rating in train file: 3.525461
+user id count: 138493
+item id count: 26744
+rating count: 20000263
+Sparsity: 99.46
+min user id: 0
+max user id: 138492
+min item id: 0
+max item id: 26743
+mean rating in train file: 3.525641

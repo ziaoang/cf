@@ -9,8 +9,9 @@ try:
     trainFile  = sys.argv[2]
     testFile   = sys.argv[3]
     ratio      = float(sys.argv[4])
+    k_times    = int(sys.argv[5])
 except:
-    print("ratingFile trainFile testFile ratio")
+    print("ratingFile trainFile testFile ratio k_times")
     exit()
 
 # load rating record
@@ -58,24 +59,27 @@ for i in range(len(userIdList)):
 for i in range(len(itemIdList)):
     itemIdToItemIndex[itemIdList[i]] = i
 
-# generate training set and test set
-random.shuffle(recordList)
+# generate training set and test set for k times
+for i in range(k_times):
+    print("%d cross"%(i+1))
+    
+    random.shuffle(recordList)
 
-trainDf = open(trainFile, "w")
-testDf  = open(testFile, "w")
-for record in recordList:
-    userId = record[0]
-    itemId = record[1]
-    rating = record[2]
-    time   = record[3]
+    trainDf = open(trainFile+".%d.txt"%(i+1), "w")
+    testDf  = open(testFile+".%d.txt"%(i+1), "w")
+    for record in recordList:
+        userId = record[0]
+        itemId = record[1]
+        rating = record[2]
+        time   = record[3]
 
-    userIndex = userIdToUserIndex[userId]
-    itemIndex = itemIdToItemIndex[itemId]
+        userIndex = userIdToUserIndex[userId]
+        itemIndex = itemIdToItemIndex[itemId]
 
-    if random.random() < ratio:
-        trainDf.write("%d %d %s %s\n"%(userIndex, itemIndex, rating, time))
-    else:
-        testDf.write("%d %d %s %s\n"%(userIndex, itemIndex, rating, time))
-trainDf.close()
-testDf.close()
+        if random.random() < ratio:
+            trainDf.write("%d %d %s %s\n"%(userIndex, itemIndex, rating, time))
+        else:
+            testDf.write("%d %d %s %s\n"%(userIndex, itemIndex, rating, time))
+    trainDf.close()
+    testDf.close()
 
