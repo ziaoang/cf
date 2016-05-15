@@ -206,3 +206,56 @@ max user id: 480188
 min item id: 0
 max item id: 17769
 mean rating in train file: 3.604363
+943 users
+1682 items
+1 cross
+2 cross
+3 cross
+4 cross
+5 cross
+user id count: 943
+item id count: 1682
+rating count: 100000
+Sparsity: 93.70
+min user id: 0
+max user id: 942
+min item id: 0
+max item id: 1681
+mean rating in train file: 3.528988
+user id count: 943
+item id count: 1682
+rating count: 100000
+Sparsity: 93.70
+min user id: 0
+max user id: 942
+min item id: 0
+max item id: 1681
+mean rating in train file: 3.529110
+user id count: 943
+item id count: 1682
+rating count: 100000
+Sparsity: 93.70
+min user id: 0
+max user id: 942
+min item id: 0
+max item id: 1681
+mean rating in train file: 3.526786
+user id count: 943
+item id count: 1682
+rating count: 100000
+Sparsity: 93.70
+min user id: 0
+max user id: 942
+min item id: 0
+max item id: 1681
+mean rating in train file: 3.531573
+user id count: 943
+item id count: 1682
+rating count: 100000
+Sparsity: 93.70
+min user id: 0
+max user id: 942
+min item id: 0
+max item id: 1681
+mean rating in train file: 3.528377
+

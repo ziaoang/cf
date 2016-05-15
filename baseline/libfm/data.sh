@@ -1,3 +1,8 @@
+# ml-100k
+for i in $(seq 1 5); do
+    python format.py ../../data/movielens/ml-100k/u.data ../../data/my/train-100k.${i}.txt ../../data/my/test-100k.${i}.txt data/train-100k.${i}.libfm data/test-100k.${i}.libfm
+done
+
 # ml-1m
 for i in $(seq 1 5); do
     python format.py ../../data/movielens/ml-1m/ratings.dat ../../data/my/train-1m.${i}.txt ../../data/my/test-1m.${i}.txt data/train-1m.${i}.libfm data/test-1m.${i}.libfm

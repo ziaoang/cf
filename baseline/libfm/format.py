@@ -33,6 +33,8 @@ for line in open(ratingFile):
         splitChar = "::"
     elif "," in line:
         splitChar = "," 
+    elif "\t" in line:
+        splitChar = "\t" 
     else:
         print("Rating File Format Error")
         exit()

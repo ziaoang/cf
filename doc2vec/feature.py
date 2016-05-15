@@ -32,7 +32,7 @@ for userId in userPool:
     sentences.append(sentence)
 
 
-model = gensim.models.Doc2Vec(sentences, size=50, window=10, min_count=1, workers=1, sample=1e-5, dm=1, seed=123456789)
+model = gensim.models.Doc2Vec(sentences, size=100, window=10, min_count=1, workers=10, sample=1e-5, dm=1, iter=10)
 
 
 userList = list(userSet)

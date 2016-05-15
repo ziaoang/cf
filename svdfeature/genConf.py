@@ -80,11 +80,11 @@ df.write("num_user   = %d\n"%num_user)
 df.write("num_item   = %d\n"%num_item)
 
 df.write("active_type = 0\n")
-df.write("num_factor  = 64\n")
+df.write("num_factor  = 256\n")
 
-df.write("learning_rate = 0.005\n")
-df.write("wd_item       = 0.004\n")
-df.write("wd_user       = 0.004\n")
+df.write("learning_rate = 0.004\n")
+df.write("wd_item       = 0.028\n")
+df.write("wd_user       = 0.028\n")
 
 df.close()
 

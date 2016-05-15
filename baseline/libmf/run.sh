@@ -1,4 +1,4 @@
-for i in 1m 10m 20m net; do
+for i in 100k 1m 10m 20m net; do
     for j in $(seq 1 5); do
         trainFile=data/train-${i}.${j}.txt
         testFile=data/test-${i}.${j}.txt
