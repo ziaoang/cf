@@ -5,13 +5,16 @@ from collections import defaultdict
 random.seed(123456789)
 
 try:
-    ratingFile = sys.argv[1]
-    trainFile  = sys.argv[2]
-    testFile   = sys.argv[3]
-    ratio      = float(sys.argv[4])
-    k_times    = int(sys.argv[5])
+    ratingFile    = sys.argv[1]
+    trainFile     = sys.argv[2]
+    testFile      = sys.argv[3]
+    confFile      = sys.argv[4]
+    subTrainFile  = sys.argv[5]
+    subTestFile   = sys.argv[6]
+    subConfFile   = sys.argv[7]
+    ratio         = float(sys.argv[8])
 except:
-    print("ratingFile trainFile testFile ratio k_times")
+    print("ratingFile trainFile testFile confFile subTrainFile subTestFile subConfFile ratio")
     exit()
 
 # load rating record
@@ -36,14 +39,11 @@ for line in open(ratingFile):
         print("Rating File Format Error")
         exit()
 
-    userIdStr, itemIdStr, ratingStr, timeStr = line.strip().split(splitChar)
+    userId, itemId, rating, time = line.strip().split(splitChar)
 
-    userIdSet.add(userIdStr)
-    itemIdSet.add(itemIdStr)
-    recordList.append([userIdStr, itemIdStr, ratingStr, timeStr])
-
-print("%d users"%len(userIdSet))
-print("%d items"%len(itemIdSet))
+    userIdSet.add(userId)
+    itemIdSet.add(itemId)
+    recordList.append([userId, itemId, rating, time])
 
 # turn id to index
 userIdList = list(userIdSet)
@@ -61,27 +61,67 @@ for i in range(len(userIdList)):
 for i in range(len(itemIdList)):
     itemIdToItemIndex[itemIdList[i]] = i
 
-# generate training set and test set for k times
-for i in range(k_times):
-    print("%d cross"%(i+1))
-    
-    random.shuffle(recordList)
 
-    trainDf = open(trainFile+".%d.txt"%(i+1), "w")
-    testDf  = open(testFile+".%d.txt"%(i+1), "w")
-    for record in recordList:
-        userId = record[0]
-        itemId = record[1]
-        rating = record[2]
-        time   = record[3]
+trainSum = 0
+trainCount = 0
+subTrainSum = 0
+subTrainCount = 0
 
-        userIndex = userIdToUserIndex[userId]
-        itemIndex = itemIdToItemIndex[itemId]
+userCount = len(userIdList)
+itemCount = len(itemIdList)
+total = len(recordList)
 
-        if random.random() < ratio:
-            trainDf.write("%d %d %s %s\n"%(userIndex, itemIndex, rating, time))
+random.shuffle(recordList)
+
+trainDf = open(trainFile, "w")
+testDf = open(testFile, "w")
+subTrainDf = open(subTrainFile, "w")
+subTestDf = open(subTestFile, "w")
+
+for i in range(total):
+    record = recordList[i]
+
+    userId = record[0]
+    itemId = record[1]
+    rating = record[2]
+    time   = record[3]
+
+    userIndex = userIdToUserIndex[userId]
+    itemIndex = itemIdToItemIndex[itemId]
+   
+    out = "%d %d %s %s\n"%(userIndex, itemIndex, rating, time)
+
+    if i < total * ratio:
+        trainSum += float(rating)
+        trainCount += 1
+        trainDf.write(out)
+        if i < total * ratio * ratio:
+            subTrainSum += float(rating)
+            subTrainCount += 1
+            subTrainDf.write(out)
         else:
-            testDf.write("%d %d %s %s\n"%(userIndex, itemIndex, rating, time))
-    trainDf.close()
-    testDf.close()
+            subTestDf.write(out)
+    else:
+        testDf.write(out)
+
+trainDf.close()
+testDf.close()
+subTrainDf.close()
+subTestDf.close()
+
+confDf = open(confFile, "w")
+confDf.write("base_score = %f\n"%(trainSum/trainCount))
+confDf.write("num_global = 0\n")
+confDf.write("num_user   = %d\n"%userCount)
+confDf.write("num_item   = %d\n"%itemCount)
+confDf.write("active_type = 0\n")
+confDf.close()
+
+subConfDf = open(subConfFile, "w")
+subConfDf.write("base_score = %f\n"%(subTrainSum/subTrainCount))
+subConfDf.write("num_global = 0\n")
+subConfDf.write("num_user   = %d\n"%userCount)
+subConfDf.write("num_item   = %d\n"%itemCount)
+subConfDf.write("active_type = 0\n")
+subConfDf.close()
 

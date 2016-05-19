@@ -1,13 +1,13 @@
-bufferTrainFile=data/train.buffer
-bufferTestFile=data/test.buffer
-confFile=../../data/my/conf.txt
-model_out_folder=tmp
+bufferTrainFile=data/subTrain.buffer
+bufferTestFile=data/subTest.buffer
+confFile=../../data/my/subConf.txt
+model_out_folder=subTmp
 
-num_round=100
-num_factor=2000
+num_round=50
+num_factor=64
 learning_rate=0.005
-wd_item=0.032
-wd_user=0.032
+wd_item=0.028
+wd_user=0.028
 
 ../../tool/svdfeature-1.2.2/svd_feature $confFile\
                         buffer_feature=$bufferTrainFile\

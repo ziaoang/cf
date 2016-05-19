@@ -1,3 +1,5 @@
+python split.py movielens/ml-1m/ratings.dat my/train.txt my/test.txt my/conf.txt my/subTrain.txt my/subTest.txt my/subConf.txt 0.9
+
 #python split.py movielens/ml-1m/ratings.dat my/train-1m my/test-1m 0.9 5
 #python split.py movielens/ml-10M100K/ratings.dat my/train-10m my/test-10m 0.9 5
 #python split.py movielens/ml-20m/ratings.csv my/train-20m my/test-20m 0.9 5
